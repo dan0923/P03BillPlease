@@ -78,6 +78,7 @@ public class MainActivity extends AppCompatActivity {
                 discountamt = Float.parseFloat(discount.getText().toString());
                 paxamt = Float.parseFloat(pax.getText().toString());
 
+
                 float finaltotal = 0;
                 finaltotal = (amount + svsamt + gstamt) - ((amount + svsamt + gstamt) * (discountamt / 100));
                 float finalpay = 0;
@@ -97,6 +98,8 @@ public class MainActivity extends AppCompatActivity {
                 amt.setText("");
                 pax.setText("");
                 discount.setText("");
+                svs.setChecked(false);
+                gst.setChecked(false);
             }
         });
     }
